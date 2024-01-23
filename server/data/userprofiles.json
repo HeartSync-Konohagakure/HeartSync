@@ -1,0 +1,92 @@
+[
+    {
+        "fullname": "Monkey D. Luffy",
+        "birthdate": "1990-01-01",
+        "profilePicture": "https://d1tgyzt3mf06m9.cloudfront.net/v3-staging/2023/08/tranformasi-luffy-one-piece-cover.png",
+        "address": "East Blue",
+        "occupation": "Pirate",
+        "bio": "I'm on a journey to become the Pirate King!",
+        "UserId": 1
+    },
+    {
+        "fullname": "Nami",
+        "birthdate": "1985-05-15",
+        "profilePicture": "https://upload.wikimedia.org/wikipedia/id/f/f5/Nami_faace.jpg",
+        "address": "Cocoyasi Village",
+        "occupation": "Navigator",
+        "bio": "I'm navigating the seas with the Straw Hat Pirates",
+        "UserId": 2
+    },
+    {
+        "fullname": "Edward Elric",
+        "birthdate": "1983-03-07",
+        "profilePicture": "https://upload.wikimedia.org/wikipedia/en/b/b5/Edward85as.JPG",
+        "address": "Resembool, Amestris",
+        "occupation": "State Alchemist",
+        "bio": "I'm searching for the Philosopher's Stone to restore my brother and myself",
+        "UserId": 3
+    },
+    {
+        "fullname": "Sakura Haruno",
+        "birthdate": "1997-10-10",
+        "profilePicture": "https://static.wikia.nocookie.net/naruto/images/6/64/Sakura_Part_1.png/revision/latest?cb=20170620220829&path-prefix=id",
+        "address": "Hidden Leaf Village",
+        "occupation": "Ninja",
+        "bio": "I'm a member of Team 7, striving to become a great ninja",
+        "UserId": 4
+    },
+    {
+        "fullname": "Lelouch vi Britannia",
+        "birthdate": "1980-03-01",
+        "profilePicture": "https://static.wikia.nocookie.net/p__/images/0/0e/Code_Geass_Lelouch_Render.png/revision/latest?cb=20230404060114&path-prefix=protagonist",
+        "address": "Britannia",
+        "occupation": "Strategist",
+        "bio": "I'm the masked rebel fighting against Britannian oppression",
+        "UserId": 5
+    },
+    {
+        "fullname": "Naruto Uzumaki",
+        "birthdate": "1989-10-10",
+        "profilePicture": "https://upload.wikimedia.org/wikipedia/id/3/36/Naruto_Uzumaki.png",
+        "address": "Hidden Leaf Village",
+        "occupation": "Hokage",
+        "bio": "I'm gonna be the Hokage, believe it!",
+        "UserId": 6
+    },
+    {
+        "fullname": "Levi Ackerman",
+        "birthdate": "1992-02-10",
+        "profilePicture": "https://miro.medium.com/v2/resize:fit:1200/1*sKHd5kEKQvJOqN5KZH7CMA.jpeg",
+        "address": "Walls of Maria",
+        "occupation": "Captain",
+        "bio": "I'm humanity's strongest soldier, cleaning up Titans",
+        "UserId": 7
+    },
+    {
+        "fullname": "Kagome Higurashi",
+        "birthdate": "2000-02-09",
+        "profilePicture": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cb16875d-c1a3-4ada-aea3-91fd19d997ef/dg2nk7t-cf851e3e-4fb7-4981-8a91-d2d102b95758.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NiMTY4NzVkLWMxYTMtNGFkYS1hZWEzLTkxZmQxOWQ5OTdlZlwvZGcybms3dC1jZjg1MWUzZS00ZmI3LTQ5ODEtOGE5MS1kMmQxMDJiOTU3NTguanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WJnjcIYd1_y6LPNOCfRoELnrita9O2D754-VD-N3i4k",
+        "address": "Tokyo, Japan",
+        "occupation": "Time-Traveling Priestess",
+        "bio": "I travel between worlds, fighting demons and seeking shards of the Shikon Jewel",
+        "UserId": 8
+    },
+    {
+        "fullname": "Saitama",
+        "birthdate": "1986-02-10",
+        "profilePicture": "https://cdn.pixabay.com/photo/2023/08/24/19/58/saitama-8211499_960_720.png",
+        "address": "City Z",
+        "occupation": "Hero for Fun",
+        "bio": "I defeat villains with just one punch",
+        "UserId": 9
+    },
+    {
+        "fullname": "Goku",
+        "birthdate": "1990-10-10",
+        "profilePicture": "https://static.wikia.nocookie.net/p__/images/8/81/Goku_Super_Hero_Infobox.png/revision/latest?cb=20220220034848&path-prefix=protagonist",
+        "address": "Mount Paozu",
+        "occupation": "Saiyan",
+        "bio": "I'm a Saiyan warrior training to become the strongest fighter in the universe",
+        "UserId": 10
+    }
+]

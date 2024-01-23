@@ -1,11 +1,12 @@
 
+
 const HomePage = () => {
 
-    return (
-      <>
-  
-      </>
-    )
-  }
-  
-  export default HomePage
+  return (
+    <>
+
+    </>
+  )
+}
+
+export default HomePage

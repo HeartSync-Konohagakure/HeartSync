@@ -1,0 +1,15 @@
+.swipe-like {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swipe-unlike {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .swipe-skip {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  

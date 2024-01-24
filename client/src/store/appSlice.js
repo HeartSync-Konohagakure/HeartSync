@@ -58,7 +58,33 @@ export const userProfileFetch = () => {
                 title: "Oops...",
                 text: `${error.response.data.message}`,
             })
-            throw error
+        }
+    }
+}
+
+export const saveSubmitUpdated = (input) => {
+    return async (dispatch) => {
+        try {
+            let link = "http://localhost:3000/users"
+            await axios({
+                method: 'put',
+                url: link,
+                data: input,
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.access_token
+                }
+            })
+            Swal.fire({
+                title: "Success!",
+                text: "Updated successfully",
+                icon: "success"
+            })
+        } catch (error) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: `${error.response.data.message}`,
+            })
         }
     }
 }

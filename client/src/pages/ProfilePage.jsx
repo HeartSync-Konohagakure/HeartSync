@@ -35,7 +35,7 @@ const ProfilePage = () => {
 
                         <div className="group p-6 grid z-10">
                             <a
-                                href=''
+                               
                                 className="group-hover:text-cyan-700 font-bold sm:text-2xl line-clamp-2"
                             >
                                 {userProfile?.UserProfile?.fullname}

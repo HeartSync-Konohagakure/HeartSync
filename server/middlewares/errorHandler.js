@@ -10,6 +10,18 @@ function errorHandler(error, req, res, next) {
             statusCode = 400
             message = error.errors[0].message
             break;
+        case 'Password is required':
+            statusCode = 400
+            message = 'Password is required'
+            break;
+        case 'Email is required':
+            statusCode = 400
+            message = 'Email is required'
+            break;
+        case 'Invalid email/password':
+            statusCode = 401
+            message = 'Invalid email/password'
+            break;
     }
 
     res.status(statusCode).json({ message })

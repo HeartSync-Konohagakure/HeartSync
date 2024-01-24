@@ -21,7 +21,9 @@ router.put("/users", authorizationUser, UserController.updateUser);
 router.delete("/users", authorizationUser, UserController.deleteUser);
 
 router.post("/users/like/:idUser", MatchesController.likeUser);
-router.post("/users/unlike/:idUser", MatchesController.unLike);
+router.post("/users/unlike/:idUser", MatchesController.dislike);
+router.get("/users/matches", MatchesController.fetchMatch);
+
 
 router.use(errorHandler);
 

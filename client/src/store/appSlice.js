@@ -6,16 +6,20 @@ export const appSlice = createSlice({
     name: 'app',
     initialState: {
         accessToken: null,
+        userProfile: {},
 
     },
     reducers: {
         setAccessToken: (state, action) => {
             state.accessToken = action.payload;
         },
+        changeUserProfile: (state, action) => {
+            state.userProfile = action.payload
+        },
     },
 });
 
-export const { setAccessToken } = appSlice.actions;
+export const { setAccessToken, changeUserProfile } = appSlice.actions;
 
 export const login = (input) => async (dispatch) => {
     try {
@@ -35,5 +39,28 @@ export const login = (input) => async (dispatch) => {
         });
     }
 };
+
+export const userProfileFetch = () => {
+    return async (dispatch) => {
+        try {
+            let link = "http://localhost:3000/users/profile"
+            let { data } = await axios({
+                method: 'get',
+                url: link,
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.access_token
+                }
+            })
+            dispatch(changeUserProfile(data))
+        } catch (error) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: `${error.response.data.message}`,
+            })
+            throw error
+        }
+    }
+}
 
 export default appSlice.reducer

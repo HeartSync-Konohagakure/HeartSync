@@ -7,7 +7,7 @@ const ChatBox = ({chatBoxRef, nameUserOnChat, message, userProfile, formatterDat
         <div className='chat-header bg-base-300'>
           <p className='text-base text-center'>{nameUserOnChat}</p>
         </div>
-        <div className='p-4  h-[370px]'>
+        <div className='p-4  h-[570px]'>
 
           {message && message.map((msg, i) => (
             <div key={i} className={`chat ${msg.SenderId === userProfile.id ? 'chat-end' : 'chat-start'}`}>

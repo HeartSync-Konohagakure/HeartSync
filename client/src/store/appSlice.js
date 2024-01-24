@@ -7,6 +7,7 @@ export const appSlice = createSlice({
     initialState: {
         accessToken: null,
         userProfile: {},
+       
 
     },
     reducers: {
@@ -23,31 +24,31 @@ export const { setAccessToken, changeUserProfile } = appSlice.actions;
 
 export const register = (input) => {
     return async (dispatch) => {
-      try {
-        const response = await axios.post('http://localhost:3000/register', input);
-  
-        Swal.fire({
-          title: 'Success!',
-          text: 'Your registration is successful',
-          icon: 'success',
-        });
-  
-        console.log(response.data); 
-  
-      } catch (error) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: `${error.response.data.message}`,
-        });
-  
-        dispatch(changeErrorMessage(error.response.data.message));
-        dispatch(changeIsError(true));
-  
-        throw error;
-      }
+        try {
+            const response = await axios.post('http://localhost:3000/register', input);
+
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your registration is successful',
+                icon: 'success',
+            });
+
+            console.log(response.data);
+
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `${error.response.data.message}`,
+            });
+
+            dispatch(changeErrorMessage(error.response.data.message));
+            dispatch(changeIsError(true));
+
+            throw error;
+        }
     };
-  };
+};
 
 export const login = (input) => async (dispatch) => {
     try {
@@ -116,5 +117,6 @@ export const saveSubmitUpdated = (input) => {
         }
     }
 }
+
 
 export default appSlice.reducer

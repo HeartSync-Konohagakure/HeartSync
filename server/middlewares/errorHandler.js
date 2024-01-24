@@ -42,6 +42,10 @@ function errorHandler(error, req, res, next) {
             statusCode = 400
             message = 'You Have Already Like/Dislike This Person'
             break;
+        case 'NotAvailable':
+            statusCode = 404
+            message = 'No Users Matched'
+            break;
     }
 
     res.status(statusCode).json({ message })

@@ -46,6 +46,10 @@ function errorHandler(error, req, res, next) {
             statusCode = 404
             message = 'No Users Matched'
             break;
+        case 'Chat Not Available':
+            statusCode = 404
+            message = 'This Chat Already Exist'
+            break;
     }
 
     res.status(statusCode).json({ message })

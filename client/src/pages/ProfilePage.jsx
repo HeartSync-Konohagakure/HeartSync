@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { userProfileFetch } from '../store/appSlice'
+import { Link } from 'react-router-dom';
 
 const ProfilePage = () => {
 
@@ -34,7 +35,7 @@ const ProfilePage = () => {
 
                         <div className="group p-6 grid z-10">
                             <a
-                                href=''
+                               
                                 className="group-hover:text-cyan-700 font-bold sm:text-2xl line-clamp-2"
                             >
                                 {userProfile?.UserProfile?.fullname}
@@ -60,7 +61,7 @@ const ProfilePage = () => {
                                 <div className="flex flex-col items-end">
                                     <div className="h-2" />
                                     <span className="text-l font-bold text-slate-300">
-                                        <button className="btn btn-primary">Edit Profile</button>
+                                        <Link to="/edit-profile" className="btn btn-primary">Edit Profile</Link>
                                     </span>
                                 </div>
                             </div>

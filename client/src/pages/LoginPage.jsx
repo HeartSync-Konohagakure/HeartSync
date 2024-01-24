@@ -1,10 +1,38 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../store/appSlice';
+
 
 const LoginPage = () => {
+
+  const [input, setInput] = useState({
+    email: '',
+    password: '',
+});
+
+const dispatch = useDispatch();
+const navigate = useNavigate();
+
+const handleInput = (e) => {
+    const { name, value } = e.target;
+    setInput({
+        ...input,
+        [name]: value,
+    });
+};
+
+const handleForm = (e) => {
+    e.preventDefault();
+    dispatch(login(input)).then(() => {
+        navigate('/');
+    });
+};
 
   return (
     <>
       <div className="flex items-center justify-center min-h-screen">
-        <form >
+        <form onSubmit={handleForm}>
           <div className="relative flex flex-col m-6 space-y-8 bg-base-200 shadow-2xl rounded-2xl md:flex-row md:space-y-0">
             <div className="flex flex-col justify-center p-8 md:p-14">
               <span className="mb-3 text-4xl font-bold">Login</span>
@@ -18,7 +46,7 @@ const LoginPage = () => {
                   className="w-full p-2 rounded-md border"
                   name="email"
                   id="email"
-                  
+                  onChange={handleInput}
                 />
               </div>
               <div className="py-4">
@@ -27,7 +55,7 @@ const LoginPage = () => {
                   type="password"
                   name="password"
                   id="password"
-                  
+                  onChange={handleInput}
                   className="w-full p-2 rounded-md border"
                 />
               </div>

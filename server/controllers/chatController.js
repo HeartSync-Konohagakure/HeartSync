@@ -93,7 +93,7 @@ class ChatController {
     static async sendMessage(req,res,next) {
         try {
             if (req.body.content === '') {
-                throw { name: "inputYourText" }
+                throw { name: "Message is Required" }
             }
             let newMessage = await Message.create({
                 SenderId: req.user.id,
@@ -102,6 +102,20 @@ class ChatController {
                 ChatId: req.body.ChatId,
             })
             return res.status(201).json(newMessage)
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async fetchMessage(req,res,next) {
+        try {
+            let message = await Message.findAll({
+                where: {
+                    ChatId: req.params.ChatId
+                },
+                order: [['id', 'ASC']]
+            })
+            return res.status(200).json(message)
         } catch (error) {
             next(error);
         }

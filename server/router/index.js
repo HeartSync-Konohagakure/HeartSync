@@ -29,6 +29,7 @@ router.post("/chat/:idUser", ChatController.createChat);
 router.get("/chat/find", ChatController.getUserChat);
 
 router.post("/message", ChatController.sendMessage);
+router.get("/message/:ChatId", ChatController.fetchMessage);
 
 router.use(errorHandler);
 

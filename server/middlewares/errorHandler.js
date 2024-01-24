@@ -40,7 +40,7 @@ function errorHandler(error, req, res, next) {
             break;
         case 'Duplicate':
             statusCode = 400
-            message = 'You Have Already Like This Person'
+            message = 'You Have Already Like/Dislike This Person'
             break;
     }
 

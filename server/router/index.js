@@ -1,3 +1,4 @@
+const ChatController = require("../controllers/chatController");
 const MatchesController = require("../controllers/matchesController");
 const UserController = require("../controllers/userController");
 const authentication = require("../middlewares/authentication");
@@ -23,6 +24,8 @@ router.delete("/users", authorizationUser, UserController.deleteUser);
 router.post("/users/like/:idUser", MatchesController.likeUser);
 router.post("/users/unlike/:idUser", MatchesController.dislike);
 router.get("/users/matches", MatchesController.fetchMatch);
+
+router.post("/chat/:idUser", ChatController.createChat);
 
 
 router.use(errorHandler);

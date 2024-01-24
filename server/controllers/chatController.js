@@ -1,4 +1,4 @@
-const { Chat, User, UserProfile } = require("../models");
+const { Chat, User, UserProfile, Message } = require("../models");
 const { Op } = require("sequelize");
 
 class ChatController {
@@ -85,6 +85,23 @@ class ChatController {
             } else {
                 throw { name: 'NotFound' };
             }
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async sendMessage(req,res,next) {
+        try {
+            if (req.body.content === '') {
+                throw { name: "inputYourText" }
+            }
+            let newMessage = await Message.create({
+                SenderId: req.user.id,
+                ReceiverId: req.body.ReceiverId,
+                content: req.body.content,
+                ChatId: req.body.ChatId,
+            })
+            return res.status(201).json(newMessage)
         } catch (error) {
             next(error);
         }

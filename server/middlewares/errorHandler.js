@@ -50,6 +50,10 @@ function errorHandler(error, req, res, next) {
             statusCode = 404
             message = 'This Chat Already Exist'
             break;
+        case 'Message is Required':
+            statusCode = 400
+            message = 'Message is Required'
+            break;
     }
 
     res.status(statusCode).json({ message })

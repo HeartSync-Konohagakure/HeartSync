@@ -30,6 +30,7 @@ const Matches = () => {
   let [newTextMessage, setNewTextMessage] = useState('')
 
   let [idUserOnline, setIdUserOnline] = useState([])
+  
 
   function formatterDate(dateString) {
     try {
@@ -94,6 +95,7 @@ const Matches = () => {
           Authorization: 'Bearer ' + localStorage.access_token,
         },
       })
+      
       setIsAddtoChatListCalled(false)
       setMatchId(idUser)
     } catch (error) {

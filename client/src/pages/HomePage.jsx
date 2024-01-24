@@ -69,7 +69,7 @@ const HomePage = () => {
         </h2>
         <div className="flex justify-center">
           <div className="card card-side bg-base-100 shadow-xl">
-            <figure className="w-60 h-60 overflow-hidden">
+            <figure className="w-60 h-80 overflow-hidden">
               <img
                 src={userData[currentIndex]?.UserProfile?.profilePicture}
                 alt={userData[currentIndex]?.username} />

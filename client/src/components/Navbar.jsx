@@ -23,9 +23,30 @@ const Navbar = () => {
     localStorage.clear();
     navigate("/login");
   };
+  
 
   return (
     <>
+    <style>
+        {`
+          @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+              transform: translateY(0);
+            }
+            40% {
+              transform: translateY(-20px);
+            }
+            60% {
+              transform: translateY(-10px);
+            }
+          }
+
+          .bounce {
+            animation: bounce 1s infinite;
+          }
+        `}
+      </style>
+
       <div className="navbar bg-base-100 shadow-md">
         <div className="navbar-start">
           <div className="dropdown">
@@ -43,7 +64,7 @@ const Navbar = () => {
           <Link to="/" className="btn btn-ghost text-xl"><b>HeartSync</b></Link>
         </div>
         <div className="navbar-end">
-          <Link to="/matches" className="btn btn-ghost btn-circle">
+          <Link to="/matches" className="btn btn-ghost btn-circle bounce">
             <div className="indicator">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.6 8.5h8m-8 3.5H12m7.1-7H5c-.2 0-.5 0-.6.3-.2.1-.3.3-.3.6V15c0 .3 0 .5.3.6.1.2.4.3.6.3h4l3 4 3-4h4.1c.2 0 .5 0 .6-.3.2-.1.3-.3.3-.6V6c0-.3 0-.5-.3-.6a.9.9 0 0 0-.6-.3Z" />

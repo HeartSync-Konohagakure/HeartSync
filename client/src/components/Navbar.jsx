@@ -1,11 +1,13 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
 
   const savedTheme = localStorage.getItem('theme')
   const initialTheme = savedTheme || 'night'
   const [theme, setTheme] = useState(initialTheme)
+  const navigate = useNavigate();
 
   const toggleTheme = () => {
     const newTheme = theme === 'valentine' ? 'night' : 'valentine'
@@ -17,6 +19,11 @@ const Navbar = () => {
     document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
 
+  const logout = () => {
+    localStorage.clear();
+    navigate("/login");
+  };
+
   return (
     <>
       <div className="navbar bg-base-100 shadow-md">
@@ -26,9 +33,9 @@ const Navbar = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Homepage</a></li>
-              <li><a>Edit Profile</a></li>
-              <li><a>Logout</a></li>
+              <li><a><Link to="/">Homepage</Link></a></li>
+              <li><a><Link to="/profile">Profile</Link></a></li>
+              <li onClick={logout}><a>Logout</a></li>
             </ul>
           </div>
         </div>

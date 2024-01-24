@@ -32,7 +32,7 @@ export const register = (input) => {
           icon: 'success',
         });
   
-        console.log(response.data);  // Assuming you want to log the response data
+        console.log(response.data); 
   
       } catch (error) {
         Swal.fire({

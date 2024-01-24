@@ -38,6 +38,10 @@ function errorHandler(error, req, res, next) {
             statusCode = 403
             message = 'Forbidden Access'
             break;
+        case 'Duplicate':
+            statusCode = 400
+            message = 'You Have Already Like This Person'
+            break;
     }
 
     res.status(statusCode).json({ message })

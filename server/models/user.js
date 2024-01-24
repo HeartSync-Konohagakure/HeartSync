@@ -72,9 +72,6 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
     },
-    subscription: {
-      type: DataTypes.BOOLEAN,
-    },
     remainingLikes: {
       type: DataTypes.INTEGER,
     },

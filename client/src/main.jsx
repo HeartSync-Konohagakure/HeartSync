@@ -10,9 +10,10 @@ import HomePage from './pages/HomePage.jsx'
 import App from './App.jsx'
 import ProfilePage from './pages/ProfilePage.jsx'
 import EditProfilePage from './pages/EditProfilePage.jsx'
+import Matches from './pages/Matches.jsx'
 
 const router = createBrowserRouter([
-  
+
   {
     element: <App />,
     children: [
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/edit-profile",
         element: <EditProfilePage />,
+      },
+      {
+        path: "/matches",
+        element: <Matches />,
       },
     ],
   }

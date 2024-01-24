@@ -26,6 +26,7 @@ router.post("/users/unlike/:idUser", MatchesController.dislike);
 router.get("/users/matches", MatchesController.fetchMatch);
 
 router.post("/chat/:idUser", ChatController.createChat);
+router.get("/chat/find", ChatController.getUserChat);
 
 
 router.use(errorHandler);

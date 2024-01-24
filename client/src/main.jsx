@@ -11,16 +11,17 @@ import App from './App.jsx'
 import ProfilePage from './pages/ProfilePage.jsx'
 
 const router = createBrowserRouter([
-  {
-    path: "/register",
-    element: <RegisterPage />,
-  },
+  
   {
     element: <App />,
     children: [
       {
         path: "/login",
         element: <LoginPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
       },
       {
         path: "/",

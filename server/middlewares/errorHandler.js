@@ -22,6 +22,14 @@ function errorHandler(error, req, res, next) {
             statusCode = 401
             message = 'Invalid email/password'
             break;
+        case 'User Not Found':
+            statusCode = 404
+            message = 'User does not exist'
+            break;
+        case 'invalidToken':
+            statusCode = 401
+            message = 'Invalid token'
+            break;
     }
 
     res.status(statusCode).json({ message })

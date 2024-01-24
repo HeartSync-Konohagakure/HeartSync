@@ -1,6 +1,8 @@
 const { User, UserProfile } = require("../models");
 const { comparePassword } = require('../helpers/bcrypt');
 const { signToken } = require('../helpers/jwt');
+const Sequelize = require('sequelize')
+const { Op } = require("sequelize")
 
 class UserController {
     static async register(req,res,next) {
@@ -24,6 +26,7 @@ class UserController {
             next(error);
         }
     }
+
     static async login(req,res,next) {
         try {
             let { email, password } = req.body
@@ -49,6 +52,47 @@ class UserController {
 
             let access_token = signToken(data)
             res.status(200).json({ access_token, username: data.username })
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async fetchUsers(req,res,next) {
+        try {
+            let loggedInUserId = req.user.id
+            let loggedInUser = await User.findByPk(loggedInUserId)
+
+            let options = {
+                include: {
+                    model: UserProfile,
+                },
+                where: {
+                    show: true,
+                    gender: loggedInUser.interest === 'male' ? 'male' : 'female',
+                },
+                attributes: {
+                    exclude: ['remainingLikes', 'password', 'show'],
+                },
+            }
+
+            if (loggedInUser.gender === loggedInUser.interest) {    // if gender === interest, user login not show
+                options.where.id = { [Sequelize.Op.ne]: loggedInUserId }
+            }
+
+            let totalData = await User.findAll({
+                where: options.where,
+            })
+
+            let data = await User.findAll(options)
+            if (data.length <= 0) {
+                throw { name: 'User Not Found' }
+            }
+
+            res.status(200).json({
+                message: 'Data Revceived Succesfully',
+                totalData: totalData.length,
+                data,
+            })
         } catch (error) {
             next(error);
         }

@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../store/appSlice';
 
-
 const LoginPage = () => {
 
   const [input, setInput] = useState({

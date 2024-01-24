@@ -25,7 +25,7 @@ const handleInput = (e) => {
 const handleForm = (e) => {
     e.preventDefault();
     dispatch(login(input)).then(() => {
-        navigate('/');
+        navigate('/profile');
     });
 };
 

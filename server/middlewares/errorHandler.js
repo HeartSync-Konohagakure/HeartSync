@@ -24,7 +24,7 @@ function errorHandler(error, req, res, next) {
             break;
         case 'User Not Found':
             statusCode = 404
-            message = 'User does not exist'
+            message = 'No users found'
             break;
         case 'invalidToken':
             statusCode = 401

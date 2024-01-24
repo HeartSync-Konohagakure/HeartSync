@@ -12,16 +12,16 @@ import ProfilePage from './pages/ProfilePage.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/login",
-    element: <LoginPage />,
-  },
-  {
     path: "/register",
     element: <RegisterPage />,
   },
   {
     element: <App />,
     children: [
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
       {
         path: "/",
         element: <HomePage />,

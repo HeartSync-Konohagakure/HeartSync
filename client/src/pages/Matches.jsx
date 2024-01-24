@@ -30,6 +30,7 @@ const Matches = () => {
   let [newTextMessage, setNewTextMessage] = useState('')
 
   let [idUserOnline, setIdUserOnline] = useState([])
+  
 
   function formatterDate(dateString) {
     try {
@@ -94,6 +95,7 @@ const Matches = () => {
           Authorization: 'Bearer ' + localStorage.access_token,
         },
       })
+      
       setIsAddtoChatListCalled(false)
       setMatchId(idUser)
     } catch (error) {
@@ -208,9 +210,9 @@ const Matches = () => {
 
       <section>
         <div className="m-10">
-          <div className="mockup-window border bg-base-200 p-10">
+          <div className="p-10">
             <h2 className="font-bold flex justify-center font-serif mb-7 text-2xl text-primary-500">
-              Link Up
+              <b>Link Up</b>
             </h2>
           </div>
         </div>

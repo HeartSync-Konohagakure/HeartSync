@@ -11,10 +11,16 @@ import App from './App.jsx'
 import ProfilePage from './pages/ProfilePage.jsx'
 import EditProfilePage from './pages/EditProfilePage.jsx'
 import Matches from './pages/Matches.jsx'
+import Swal from 'sweetalert2'
 
 const auth = () => {
   const access_token = localStorage.access_token;
   if (!access_token){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Login Dulu Bro',
+    })
     throw redirect("/login");
   }
   return null;

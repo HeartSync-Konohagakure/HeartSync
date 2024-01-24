@@ -1,3 +1,4 @@
+const MatchesController = require("../controllers/matchesController");
 const UserController = require("../controllers/userController");
 const authentication = require("../middlewares/authentication");
 const authorizationUser = require("../middlewares/authorization");
@@ -18,6 +19,8 @@ router.get("/users",UserController.fetchUsers);
 router.get("/users/profile", authorizationUser, UserController.userProfile);
 router.put("/users", authorizationUser, UserController.updateUser);
 router.delete("/users", authorizationUser, UserController.deleteUser);
+
+router.post("/users/like/:idUser", MatchesController.likeUser);
 
 router.use(errorHandler);
 

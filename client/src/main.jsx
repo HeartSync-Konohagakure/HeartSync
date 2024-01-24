@@ -9,6 +9,7 @@ import RegisterPage from './pages/RegisterPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import App from './App.jsx'
 import ProfilePage from './pages/ProfilePage.jsx'
+import EditProfilePage from './pages/EditProfilePage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />,
+      },
+      {
+        path: "/edit-profile",
+        element: <EditProfilePage />,
       },
     ],
   }

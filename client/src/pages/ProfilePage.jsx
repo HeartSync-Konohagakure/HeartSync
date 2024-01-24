@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { userProfileFetch } from '../store/appSlice'
+import { Link } from 'react-router-dom';
 
 const ProfilePage = () => {
 
@@ -60,7 +61,7 @@ const ProfilePage = () => {
                                 <div className="flex flex-col items-end">
                                     <div className="h-2" />
                                     <span className="text-l font-bold text-slate-300">
-                                        <button className="btn btn-primary">Edit Profile</button>
+                                        <Link to="/edit-profile" className="btn btn-primary">Edit Profile</Link>
                                     </span>
                                 </div>
                             </div>

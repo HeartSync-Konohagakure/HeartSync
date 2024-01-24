@@ -97,6 +97,26 @@ class UserController {
             next(error);
         }
     }
+
+    static async userProfile(req,res,next) {
+        try {
+            let data = await User.findByPk(req.user.id, {
+                include: {
+                    model: UserProfile,
+                },
+                attributes: {
+                    exclude: ['password'],
+                },
+            })
+            if (!data) {
+                throw { name: 'NotFound' }
+            }
+
+            res.status(200).json(data)
+        } catch (error) {
+            next(error);
+        }
+    }
 }
 
 module.exports = UserController;

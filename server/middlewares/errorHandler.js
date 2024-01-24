@@ -30,6 +30,14 @@ function errorHandler(error, req, res, next) {
             statusCode = 401
             message = 'Invalid token'
             break;
+        case 'NotFound':
+            statusCode = 404
+            message = 'Data Not Found'
+            break;
+        case 'Forbidden':
+            statusCode = 403
+            message = 'Forbidden Access'
+            break;
     }
 
     res.status(statusCode).json({ message })

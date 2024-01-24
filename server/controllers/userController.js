@@ -117,6 +117,33 @@ class UserController {
             next(error);
         }
     }
+
+    static async updateUser(req,res,next) {
+        try {
+            let data = await User.findByPk(req.user.id, {
+                include: {
+                    model: UserProfile,
+                },
+                attributes: {
+                    exclude: ['password'],
+                },
+            })
+            if (!data) {
+                throw { name: "NotFound" }
+            } else {
+                const { username, email, gender, interest, show, fullname, birthdate, profilePicture, address, occupation, bio } = req.body
+                await data.update({ username, email, gender, interest, show })
+                await UserProfile.update({ fullname, birthdate, profilePicture, address, occupation, bio }, {
+                    where: {
+                        UserId: req.user.id
+                    }
+                })
+                res.status(200).json({ message: 'profile has been updated succesfully' })
+            }
+        } catch (error) {
+            next(error);
+        }
+    }
 }
 
 module.exports = UserController;

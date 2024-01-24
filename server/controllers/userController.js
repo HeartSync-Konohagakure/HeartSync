@@ -144,6 +144,27 @@ class UserController {
             next(error);
         }
     }
+
+    static async deleteUser(req,res,next) {
+        try {
+            let data = await User.findByPk(req.user.id, {
+                include: {
+                    model: UserProfile,
+                },
+                attributes: {
+                    exclude: ['password'],
+                },
+            })
+            if (!data) {
+                throw { name: "NotFound" }
+            } else {
+                await data.destroy()
+                res.status(200).json({ message: `Account Deleted Successfully` })
+            }
+        } catch (error) {
+            next(error);
+        }
+    }
 }
 
 module.exports = UserController;

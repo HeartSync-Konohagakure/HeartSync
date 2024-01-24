@@ -17,6 +17,7 @@ router.use(authentication);
 router.get("/users",UserController.fetchUsers);
 router.get("/users/profile", authorizationUser, UserController.userProfile);
 router.put("/users", authorizationUser, UserController.updateUser);
+router.delete("/users", authorizationUser, UserController.deleteUser);
 
 router.use(errorHandler);
 

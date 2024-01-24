@@ -5,11 +5,6 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       // User has one UserProfile
       User.hasOne(models.UserProfile, { foreignKey: 'UserId' });
@@ -123,10 +118,9 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'User',
     hooks: {
       beforeCreate: (instance) => {
-        let hash = hashPassword(instance.password) // bcryptJs
+        let hash = hashPassword(instance.password)
         instance.password = hash
-        instance.subscription = false
-        instance.remainingLikes = 10
+        instance.remainingLikes = 5
         instance.show = true
       }
     }

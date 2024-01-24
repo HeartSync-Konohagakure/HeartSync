@@ -3,7 +3,6 @@ import Swal from 'sweetalert2';
 import React, { useEffect, useState } from 'react';
 
 const HomePage = () => {
-
   const [userData, setUserData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 

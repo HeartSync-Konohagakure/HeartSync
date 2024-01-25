@@ -52,7 +52,7 @@ const Matches = () => {
     try {
       let { data } = await axios({
         method: 'get',
-        url: "http://localhost:3000/users/matches",
+        url: "https://heart-sync.baiquni.my.id/users/matches",
         headers: {
           Authorization: 'Bearer ' + localStorage.access_token,
         },
@@ -71,7 +71,7 @@ const Matches = () => {
     try {
       let { data } = await axios({
         method: 'get',
-        url: "http://localhost:3000/chat/find",
+        url: "https://heart-sync.baiquni.my.id/chat/find",
         headers: {
           Authorization: 'Bearer ' + localStorage.access_token,
         },
@@ -90,7 +90,7 @@ const Matches = () => {
     try {
       await axios({
         method: 'post',
-        url: `http://localhost:3000/chat/${idUser}`,
+        url: `https://heart-sync.baiquni.my.id/chat/${idUser}`,
         headers: {
           Authorization: 'Bearer ' + localStorage.access_token,
         },
@@ -119,7 +119,7 @@ const Matches = () => {
       setLoadingMsg(true)
       let { data } = await axios({
         method: 'get',
-        url: `http://localhost:3000/message/${currentChatId}`,
+        url: `https://heart-sync.baiquni.my.id/message/${currentChatId}`,
         headers: {
           Authorization: 'Bearer ' + localStorage.access_token,
         },
@@ -140,7 +140,7 @@ const Matches = () => {
     try {
       let newText = await axios({
         method: 'post',
-        url: `http://localhost:3000/message`,
+        url: `https://heart-sync.baiquni.my.id/message`,
         data: {
           ReceiverId: idUserConversation,
           content: newTextMessage,

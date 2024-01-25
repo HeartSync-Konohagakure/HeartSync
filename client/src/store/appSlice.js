@@ -25,7 +25,7 @@ export const { setAccessToken, changeUserProfile } = appSlice.actions;
 export const register = (input) => {
     return async (dispatch) => {
         try {
-            const response = await axios.post('http://localhost:3000/register', input);
+            const response = await axios.post('https://heart-sync.baiquni.my.id/register', input);
 
             Swal.fire({
                 title: 'Success!',
@@ -52,7 +52,7 @@ export const register = (input) => {
 
 export const login = (input) => async (dispatch) => {
     try {
-        const { data } = await axios.post('http://localhost:3000/login', input);
+        const { data } = await axios.post('https://heart-sync.baiquni.my.id/login', input);
 
         localStorage.access_token = data.access_token;
 
@@ -72,7 +72,7 @@ export const login = (input) => async (dispatch) => {
 export const userProfileFetch = () => {
     return async (dispatch) => {
         try {
-            let link = "http://localhost:3000/users/profile"
+            let link = "https://heart-sync.baiquni.my.id/users/profile"
             let { data } = await axios({
                 method: 'get',
                 url: link,
@@ -94,7 +94,7 @@ export const userProfileFetch = () => {
 export const saveSubmitUpdated = (input) => {
     return async (dispatch) => {
         try {
-            let link = "http://localhost:3000/users"
+            let link = "https://heart-sync.baiquni.my.id/users"
             await axios({
                 method: 'put',
                 url: link,

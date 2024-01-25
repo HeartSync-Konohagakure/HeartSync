@@ -10,7 +10,7 @@ const HomePage = () => {
     try {
       let { data } = await axios({
         method: 'get',
-        url: "http://localhost:3000/users",
+        url: "https://heart-sync.baiquni.my.id/users",
         headers: {
           Authorization: 'Bearer ' + localStorage.access_token,
         },
@@ -32,7 +32,7 @@ const HomePage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % userData.length);
       } else {
         await axios.post(
-          `http://localhost:3000/users/${action}/${userData[currentIndex].id}`,
+          `https://heart-sync.baiquni.my.id/users/${action}/${userData[currentIndex].id}`,
           {},
           {
             headers: {

@@ -34,7 +34,7 @@ const EditProfilePage = () => {
 
     async function fetching() {
         try {
-            let link = "http://localhost:3000/users/profile"
+            let link = "https://heart-sync.baiquni.my.id/users/profile"
             let { data } = await axios({
                 method: 'get',
                 url: link,

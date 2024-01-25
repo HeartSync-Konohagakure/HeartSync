@@ -1,0 +1,92 @@
+[
+    {
+        "fullname": "Monkey D. Luffy",
+        "birthdate": "1990-01-01",
+        "profilePicture": "https://a-cdn.sindonews.net/dyn/620/content/2017/11/23/158/1259787/kelemahan-monkey-d-luffy-terungkap-di-one-piece-chapter-885-rXe-thumb.jpg",
+        "address": "East Blue",
+        "occupation": "Pirate",
+        "bio": "I'm on a journey to become the Pirate King!",
+        "UserId": 1
+    },
+    {
+        "fullname": "Nami",
+        "birthdate": "1985-05-15",
+        "profilePicture": "https://upload.wikimedia.org/wikipedia/id/f/f5/Nami_faace.jpg",
+        "address": "Cocoyasi Village",
+        "occupation": "Navigator",
+        "bio": "I'm navigating the seas with the Straw Hat Pirates",
+        "UserId": 2
+    },
+    {
+        "fullname": "Edward Elric",
+        "birthdate": "1983-03-07",
+        "profilePicture": "https://preview.redd.it/edward-elric-cosplay-v0-x9vclociwyhb1.jpg?width=640&crop=smart&auto=webp&s=c3c2e6aa6a428d1f4df54b18e216ab199e166cd4",
+        "address": "Resembool, Amestris",
+        "occupation": "State Alchemist",
+        "bio": "I'm searching for the Philosopher's Stone to restore my brother and myself",
+        "UserId": 3
+    },
+    {
+        "fullname": "Sakura Haruno",
+        "birthdate": "1997-10-10",
+        "profilePicture": "https://pics.craiyon.com/2023-09-27/7b52c25faad9453e9a15cd9d45df4eb4.webp",
+        "address": "Hidden Leaf Village",
+        "occupation": "Ninja",
+        "bio": "I'm a member of Team 7, striving to become a great ninja",
+        "UserId": 4
+    },
+    {
+        "fullname": "Lelouch vi Britannia",
+        "birthdate": "1980-03-01",
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlnGM8Irk8gzaZlnkT-g-ka_Sp6zlJ4Iy8Jg&usqp=CAU",
+        "address": "Britannia",
+        "occupation": "Strategist",
+        "bio": "I'm the masked rebel fighting against Britannian oppression",
+        "UserId": 5
+    },
+    {
+        "fullname": "Naruto Uzumaki",
+        "birthdate": "1989-10-10",
+        "profilePicture": "https://sm.ign.com/t/ign_in/photo/default/3-naruto-1660779038828_9te5.1280.jpg",
+        "address": "Hidden Leaf Village",
+        "occupation": "Hokage",
+        "bio": "I'm gonna be the Hokage, believe it!",
+        "UserId": 6
+    },
+    {
+        "fullname": "Levi Ackerman",
+        "birthdate": "1992-02-10",
+        "profilePicture": "https://miro.medium.com/v2/resize:fit:1200/1*sKHd5kEKQvJOqN5KZH7CMA.jpeg",
+        "address": "Walls of Maria",
+        "occupation": "Captain",
+        "bio": "I'm humanity's strongest soldier, cleaning up Titans",
+        "UserId": 7
+    },
+    {
+        "fullname": "Kagome Higurashi",
+        "birthdate": "2000-02-09",
+        "profilePicture": "https://pm1.aminoapps.com/7601/4bae3561762b0c336a8a988eb1d970daa127de3ar1-1362-2048v2_hq.jpg",
+        "address": "Tokyo, Japan",
+        "occupation": "Time-Traveling Priestess",
+        "bio": "I travel between worlds, fighting demons and seeking shards of the Shikon Jewel",
+        "UserId": 8
+    },
+    {
+        "fullname": "Saitama",
+        "birthdate": "1986-02-10",
+        "profilePicture": "https://cdn.pixabay.com/photo/2023/08/24/19/58/saitama-8211499_960_720.png",
+        "address": "City Z",
+        "occupation": "Hero for Fun",
+        "bio": "I defeat villains with just one punch",
+        "UserId": 9
+    },
+    {
+        "fullname": "Goku",
+        "birthdate": "1990-10-10",
+        "profilePicture": "https://w0.peakpx.com/wallpaper/337/296/HD-wallpaper-goku-goku-dragon-ball-z-thumbnail.jpg",
+        "address": "Mount Paozu",
+        "occupation": "Saiyan",
+        "bio": "I'm a Saiyan warrior training to become the strongest fighter in the universe",
+        "UserId": 10
+    }
+]

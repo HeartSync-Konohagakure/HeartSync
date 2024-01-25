@@ -1,0 +1,92 @@
+[
+    {
+        "username": "luffy",
+        "email": "luffy@gmail.com",
+        "password": "luffy123",
+        "remainingLikes": null,
+        "gender": "male",
+        "interest": "female",
+        "show": true
+    },
+    {
+        "username": "nami",
+        "email": "nami@gmail.com",
+        "password": "nami123",
+        "remainingLikes": null,
+        "gender": "female",
+        "interest": "male",
+        "show": true
+    },
+    {
+        "username": "edward",
+        "email": "edward@gmail.com",
+        "password": "edward123",
+        "remainingLikes": null,
+        "gender": "male",
+        "interest": "female",
+        "show": true
+    },
+    {
+        "username": "sakura",
+        "email": "sakura@gmail.com",
+        "password": "sakura123",
+        "remainingLikes": null,
+        "gender": "female",
+        "interest": "male",
+        "show": true
+    },
+    {
+        "username": "lelouch",
+        "email": "lelouch@gmail.com",
+        "password": "lelouch123",
+        "remainingLikes": null,
+        "gender": "male",
+        "interest": "female",
+        "show": true
+    },
+    {
+        "username": "naruto",
+        "email": "naruto@gmail.com",
+        "password": "naruto123",
+        "remainingLikes": null,
+        "gender": "male",
+        "interest": "female",
+        "show": true
+    },
+    {
+        "username": "levi",
+        "email": "levi@gmail.com",
+        "password": "levi123",
+        "remainingLikes": null,
+        "gender": "male",
+        "interest": "female",
+        "show": true
+    },
+    {
+        "username": "kagome",
+        "email": "kagome@gmail.com",
+        "password": "kagome123",
+        "remainingLikes": null,
+        "gender": "female",
+        "interest": "male",
+        "show": true
+    },
+    {
+        "username": "saitama",
+        "email": "saitama@gmail.com",
+        "password": "saitama123",
+        "remainingLikes": null,
+        "gender": "male",
+        "interest": "female",
+        "show": true
+    },
+    {
+        "username": "goku",
+        "email": "goku@gmail.com",
+        "password": "goku123",
+        "remainingLikes": null,
+        "gender": "male",
+        "interest": "female",
+        "show": true
+    }
+]
